@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminPostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
+
+
+//LOGIN
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,3 +33,18 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+//ADMIN PANEL
+// Route::get('/admin', [AdminPostsController::class, 'index'])->name('admin.index')->middleware('admin');
+Route::get('/admin', [AdminPostsController::class, 'index'])->name('admin.index');
+Route::get('/admin/nowyPost', [AdminPostsController::class, 'create'])->name('admin.create');
+Route::post('/admin/nowyPost', [AdminPostsController::class, 'store'])->name('store');
+Route::get('/{post:slug}', [AdminPostsController::class, 'show'])->name('admin.show');
+Route::get('/{post:slug}/edytuj', [AdminPostsController::class, 'edit'])->name('admin.edit');
+Route::patch('/{post:slug}', [AdminPostsController::class, 'update'])->name('admin.update');
+Route::delete('/{post:slug}', [AdminPostsController::class, 'destroy'])->name('admin.destroy');
+//zmienic nazwe 
+Route::post('/admin/nowyPost/upload', [AdminPostsController::class, 'upload'])->name('ckeditor.upload');
+
+
+
