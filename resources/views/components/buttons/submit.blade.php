@@ -1,1 +1,2 @@
-<button type="submit" class="text-white bg-actionColor-300 hover:bg-actionColor-400 focus:ring-4 focus:outline-none focus:ring-white font-bold rounded-lg text-sm px-6 py-3.5 text-center uppercase transition-colors">{{$slot}}</button>
+<button type="submit"
+    class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200  font-medium  text-lg px-8 py-3 text-center mr-2 mb-2 box-shadow">{{$slot}}</button>

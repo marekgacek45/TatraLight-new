@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+body{
+    overflow-x: hidden;
+}
+
+
+/*Video Opacity*/
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 5; 
+}
+
+/*Mobile Navigation*/
+.nav-collapse {
+    left: 0 !important;
+}
+/*Primary Section*/
+.primarySection:nth-child(1){
+    @apply pt-48
+}
+
+
+
+.box-shadow {
+    box-shadow: 0px 1px 20px 1px white;
+}
+
+.box-shadow--img {
+    box-shadow: 0px 0px 15px 0px rgba(217, 249, 157, 1);
+}
+.box-shadow--img2 {
+    box-shadow: 3px 0px 15px 0px rgba(217, 249, 157, 1);
+}
+.box-shadow--img3 {
+    box-shadow: 3px 0px 15px 0px #16514f;
+}
+
+.box-shadow--nav {
+    box-shadow: 0px 3px 20px 3px white;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+
+.gradient {
+    background: linear-gradient(
+        156deg,
+        rgba(217, 249, 157, 1) 7%,
+        rgba(255, 255, 255) 38%
+    );
+}
+
+.test:nth-child(even) .test-img {
+    @apply -order-none md:order-1  lg:-order-none;
+};
+
+/*Te już są poprawne*/
+
+
+
+
+.box-shadow--img {
+    box-shadow: 0px 0px 15px 0px rgba(217, 249, 157, 1);
+}
+
+
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Main CSS */

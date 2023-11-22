@@ -1,5 +1,12 @@
 @use'./ckeditor.scss';
-
+@use './hamburger.scss';
+@use './global.scss';
+@use './text.scss';
+@use './boxShadows.scss';
+@use './gallery.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+

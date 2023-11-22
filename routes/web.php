@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPostsController;
 
@@ -32,7 +35,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+
+Route::get('/', [PagesController::class,'home'])->name('home');
+Route::get('/o-nas', [PagesController::class,'about'])->name('about');
+Route::get('/oferta', [PagesController::class,'offer'])->name('offer');
+Route::get('/galeria', [PagesController::class,'gallery'])->name('gallery');
+
+Route::get('/kontakt', [PagesController::class,'contact'])->name('contact');
+
+
 
 //ADMIN PANEL
 // Route::get('/admin', [AdminPostsController::class, 'index'])->name('admin.index')->middleware('admin');
@@ -45,6 +58,7 @@ Route::patch('/{post:slug}', [AdminPostsController::class, 'update'])->name('adm
 Route::delete('/{post:slug}', [AdminPostsController::class, 'destroy'])->name('admin.destroy');
 //zmienic nazwe 
 Route::post('/admin/nowyPost/upload', [AdminPostsController::class, 'upload'])->name('ckeditor.upload');
+
 
 
 

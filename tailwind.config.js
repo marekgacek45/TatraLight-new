@@ -14,11 +14,23 @@ export default {
 
     theme: {
         extend: {
-            fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
-            },
+          screens: {
+            'xs': '450px'},
+          colors:{
+            mainColor:'#16514f',
+            overlayColor:'#185c5a',
+            secondaryColor:'#d9f99d',
+            antracit:'#383e42',
+            beige:'#efe5d9',
+    
+          }
         },
-    },
+      },
 
     plugins: [forms, require("flowbite/plugin")],
 };
+
+
+
+  
+  

@@ -1,1 +1,2 @@
-<button {{$attributes}} class="text-white bg-actionColor-300 hover:bg-actionColor-400 focus:ring-4 focus:outline-none focus:ring-white font-bold rounded-md text-sm px-6 py-3.5 text-center uppercase transition-colors">{{$slot}}</button>
+<button type="button"
+    class="text-black bg-gradient-to-r from-beige to-white  hover:scale-105 focus:ring-4 focus:outline-none focus:ring-white  font-medium  text-lg p-8 py-3 text-center mr-2 mb-2 transition-transform">{{$slot}}</button>

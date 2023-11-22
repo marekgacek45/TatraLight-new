@@ -1,8 +1,13 @@
 import './bootstrap';
-import 'flowbite';
+import './hamburger';
+import './footerYear';
+import './counter';
+import "flowbite";
 
-import Alpine from 'alpinejs';
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-window.Alpine = Alpine;
 
-Alpine.start();
+Fancybox.bind('[data-fancybox="gallery"]', {
+    //
+  });
